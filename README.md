@@ -643,10 +643,10 @@ firebase-realtime-database                        npm
 # Time to Create the TSV Files
           minutes
 PostHistory 1424
-PostLinks  783.38		  
-Comments   181 
-Badges      11
-Users       10
-PostLinks    2
-Tags         0.0.849
+PostLinks    783.38		  
+Comments     181 
+Badges        11
+Users         10
+PostLinks      2
+Tags           0.0.849
 Votes       

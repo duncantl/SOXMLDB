@@ -119,6 +119,6 @@ CREATE TABLE TagPosts (
 .import PostHistoryTypeId.csv PostHistoryTypeId
 .import Votes.csv Votes
 
-.import PostsIdTable.tsv TagPos
+.import PostsIdTable.tsv TagPosts
 # Started 4pm - 
 # PostsIdTable.tsv:125130: expected 2 columns but found 1 - filling the rest with NULL
