@@ -4,8 +4,9 @@ CREATE TABLE Foo(
   dValue REAL
 );
 
-.mode csv
-.separator \t
+#.mode csv
+#.separator \t
+.mode tabs
 
 .import foo.tsv Foo
 
