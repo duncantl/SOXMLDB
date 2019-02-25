@@ -134,7 +134,7 @@ There are 53,810 unique tags. The frequency for each is in TagCounts. See the to
 
 
 # Tag Counts
-
+```{r}
 head(sort(tagCounts, decreasing = TRUE), 500)
                 javascript                       java 
                    1723695                    1487204 
@@ -637,10 +637,11 @@ firebase-realtime-database                        npm
             jquery-plugins               linux-kernel 
                      12985                      12985 
 
-
+```
 
 
 # Time to Create the TSV Files
+```
           minutes
 PostHistory 1424
 PostLinks    783.38		  
@@ -650,3 +651,4 @@ Users         10
 PostLinks      2
 Tags           0.0.849
 Votes       
+```
