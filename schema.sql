@@ -101,24 +101,30 @@ CREATE TABLE Votes(
 );
 
 CREATE TABLE TagPosts (
- Id INTEGER PRIMARY KEY,
+ Id INTEGER,
  Tag TEXT
 );
 
 
 
 .mode tabs
-.import Badges.csv Badges
-.import Comments.csv Comments
-.import PostHistory.csv PostHistory
-.import PostLinks.csv PostLinks
-.import Posts.csv Posts
-.import Tags.csv Tags
-.import Users.csv Users
-.import Votes.csv Votes
-.import PostHistoryTypeId.csv PostHistoryTypeId
-.import Votes.csv Votes
+.import Badges.tsv Badges
+.import Comments.tsv Comments  
+.import PostLinks.tsv PostLinks
+.import Posts.tsv Posts
+# .import PostsIdTable.tsv TagPosts
+.import NoHeaderPostsIdTable2.tsv  TagPosts
+.import Tags.tsv Tags
+.import Users.tsv Users
+.import Votes.tsv Votes
 
-.import PostsIdTable.tsv TagPosts
+.import RPostsOnly.tsv RPosts
+
+.mode csv
+.import PostHistoryTypeId.csv PostHistoryTypeId
+
+
+#.import PostHistory.tsv PostHistory
+
 # Started 4pm - 
 # PostsIdTable.tsv:125130: expected 2 columns but found 1 - filling the rest with NULL

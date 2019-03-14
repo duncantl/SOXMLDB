@@ -646,9 +646,28 @@ firebase-realtime-database                        npm
 PostHistory 1424
 PostLinks    783.38		  
 Comments     181 
+Votes         49
 Badges        11
 Users         10
 PostLinks      2
 Tags           0.0.849
-Votes       
 ```
+
+
+To load these into SQLite3, we get the following approximate times
+
+              Minutes
+Users.tsv      3 
+Votes.tsv     11
+Tags.tsv       0
+PostLinks.tsv  < 1
+Badges.tsv     2
+
+Comments.tsv   7:33    14G
+
+
+
+Comments.tsv:81: unescaped " character
+Comments.tsv:85: unescaped " character
+Comments.tsv:85: unescaped " character
+Comments.tsv:85: expected 7 columns but found 6 - filling the rest with NULL
