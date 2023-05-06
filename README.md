@@ -28,17 +28,20 @@ for f in stackoverflow.com*7z ; do echo $f; 7za x $f ; done
 ```
 
 
-## Convert the XML to CSV
-To convert any of the XML files to CSV format, you can use the command, e.g.,
+## Convert the XML to TSV
+To convert any of the XML files to TSV format, you can use the command, e.g.,
 ```
-make Badges.csv
+make Badges.tsv
 ```
-Alternatively, you can create all of the CSV files from the XML files using 
+Alternatively, you can create all of the TSV files from the XML files using 
 ```
 make
 ```
 These commands use the GNUmakefile in this directory where we added rules 
 about how to convert the XML.
+
+We create TSV files rather than CSV files as the comma character can occur inside cell values
+and cannot be reliably differentiated from cell/field separators.
 
 This approach uses our sax2csv command available at [https://github.com/dsidavis/SAX2CSV](https://github.com/dsidavis/SAX2CSV).
 This uses an event-driven/streaming XML parser since the XML files are very large.
@@ -87,7 +90,6 @@ It takes almost 6 minutes to read Badges.csv.
 
 
 
-
 #
 Id Tags Table
 
@@ -114,7 +116,7 @@ Id	Tags
 
 There are 53,810 unique tags. The frequency for each is in TagCounts. See the top 500 tags below.
 
-###  Mapping from TypeIds to Descroptions
+###  Mapping from TypeIds to Descriptions
 + Votes.csv/xml
    + The VoteTypeId maps to a table of explanations/descriptions in VoteTypeId.csv
 + PostLinks.csv/xml
