@@ -15,7 +15,7 @@ endif
 #	time $(SAX2CSV) $< $@ `$(SAX2CSV) $<`
 
 %.tsv: %.xml  $(SAX2CSV)
-	time $(SAX2CSV) --noheader $< $@ `cat $*.vars`
+	time $(SAX2CSV) --noheader $< $@ `cat $(notdir $*).vars`
 
 PostsIdTable.tsv: $(SAX2CSV) Posts.xml
 	time $(SAX2CSV) --tags Posts.xml $@ Id Tags
