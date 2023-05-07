@@ -20,3 +20,16 @@
 20,Question Unprotected,A question was unprotected by a moderator
 21,Post Disassociated,An admin removes the OwnerUserId from a post.
 22,Question Unmerged,A previously merged question has had its answers and votes restored.
+24,Suged Edit Applied,
+25,Post Tweeted,
+31,Comment discussion moved to chat,
+33,Post notice added,
+34,Post notice remove,
+35,Postmigrated away,replaces id 17
+36,Post migrated here,replaces id 17
+37,Post merge source,
+38,Post merge destination,
+50,Bumped by Community User,
+52,Question became hot network question,
+53,Question remove from hot network/meta questions by a moderator,
+66,Created from Wizard,
