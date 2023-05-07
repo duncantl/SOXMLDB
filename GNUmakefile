@@ -16,6 +16,11 @@ ifndef MAKEDB
    MAKEDB=../MakeDB
 endif
 
+ifndef CSV_MAP_DIR
+  CSV_MAP_DIR=Maps
+endif
+
+
 #%.tsv: %.xml  $(SAX2CSV)
 #	time $(SAX2CSV) $< $@ `$(SAX2CSV) $<`
 
@@ -41,11 +46,11 @@ vars: $(VARS)
 
 %.db: $(TSV)  $(MAKEDB)/schema2.sql PostsIdTable.tsv
 	sqlite3 $@ < $(MAKEDB)/schema2.sql
-	(cd ../Maps ; sqlite3  $(CURDIR)/$@ < maps.sql)
+	(cd $(CSV_MAP_DIR) ; sqlite3 $(CURDIR)/$@ < maps.sql)
 
 
 maps:
-	(cd ../Maps ; sqlite3  $(CURDIR)/$@ < maps.sql)
+	(cd $(CSV_MAP_DIR) ; sqlite3 $(CURDIR)/$@ < maps.sql)
 
 clean:
 	-rm *.vars *.tsv *.db

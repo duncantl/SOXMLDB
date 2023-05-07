@@ -1,0 +1,2 @@
+1,Linked (PostId contains a link to RelatedPostId)
+3,Duplicate (PostId is a duplicate of RelatedPostId)

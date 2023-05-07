@@ -1,0 +1,14 @@
+1,AcceptedByOriginator
+2,UpMod (AKA upvote)
+3,DownMod (AKA downvote)
+4,Offensive
+5,Favorite (UserId will also be populated)
+6,Close (effective 2013-06-25: Close votes are only stored in table: PostHistory)
+7,Reopen
+8,BountyStart (UserId and BountyAmount will also be populated)
+9,BountyClose (BountyAmount will also be populated)
+10,Deletion
+11,Undeletion
+12,Spam
+15,ModeratorReview
+16,ApproveEditSuggestion
