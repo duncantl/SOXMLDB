@@ -1,0 +1,16 @@
+#!/bin/sh -x
+
+forum=$1
+
+
+wget2 https://archive.org/download/stackexchange/${forum}.com.7z
+7za x ${forum}.com.7z
+
+
+SOXMLDB=$HOME/GitWorkingArea/SOXMLDB
+SAX2CSV=$HOME/DSIProjects/SAX2CSV/sax2csv
+ln -s $SOXMLDB/GNUmakefile .
+
+make SAX2CSV=$SAX2CSV
+
+make ${forum}.db MAKEDB=$SOXMLDB SAX2CSV=$SAX2CSV CSV_MAP_DIR=$SOXMLDB/Maps
