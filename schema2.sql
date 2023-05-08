@@ -1,9 +1,4 @@
 
-CREATE TABLE PostHistoryTypeId(
-  Id INTEGER PRIMARY KEY,
-  Label TEXT,
-  Description TEXT
-);
 
 CREATE TABLE Badges (
   Id INTEGER PRIMARY KEY,
@@ -60,15 +55,15 @@ CREATE TABLE Posts(
   Tags TEXT,
   AnswerCount INTEGER DEFAULT NULL,
   CommentCount INTEGER DEFAULT NULL,
-  FavoriteCount INTEGER DEFAULT NULL,
   ContentLicense TEXT,
   LastEditorDisplayName TEXT,
   LastEditDate TEXT,
   LastEditorUserId INTEGER DEFAULT NULL,
   CommunityOwnedDate TEXT,
   ParentId  INTEGER DEFAULT NULL,
+  OwnerDisplayName TEXT,
   ClosedDate  TEXT,
-  OwnerDisplayName TEXT
+  FavoriteCount INTEGER DEFAULT NULL  
 );
 
 CREATE TABLE Tags (
@@ -126,11 +121,13 @@ CREATE TABLE TagPosts (
 
 .import PostHistory.tsv PostHistory
 
-.mode csv
-.import ../PostHistoryTypeId.csv PostHistoryTypeId
+# .mode csv
+# .import ../PostHistoryTypeId.csv PostHistoryTypeId
 
 
 
 
 # Started 4pm - 
 # PostsIdTable.tsv:125130: expected 2 columns but found 1 - filling the rest with NULL
+
+DROP Table Tags;
