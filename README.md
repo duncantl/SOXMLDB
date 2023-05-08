@@ -1,12 +1,18 @@
+# Scripts to build Databases from StackExchange Fora
 
-See the buildDB script
+Use the [buildDB](buildDB) script that downloads the .7za file for a specified forum and builds
+the database 
 ```
 mkdir scratch
 cd scratch
 ../buildDB unix.stackexchange
 ```
 
-## Maps
+Note: It is possible for the order of the variables to change in the .tsv files we create
+and so be in the wrong order relative to the schema which remains fixed.
+
+
+## Maps/
 
 This contains CSV files mapping enumerated constants to human-readable descriptions
 of for different types in the regular tables.
@@ -17,8 +23,14 @@ For example,
 `maps.sql` creates the SQL tables and imports the different csv files.
 
 
+## RCheckCode/
 
-## Download the stackoverflow.com-*.7z files
+R code to check the values in the database appear correct.
+
+
+
+## Steps
+### Download the stackoverflow.com-*.7z files
 
 From https://archive.org/details/stackexchange, download the individual stackoverflow.com site data
 files.
