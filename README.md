@@ -1,4 +1,23 @@
 
+See the buildDB script
+```
+mkdir scratch
+cd scratch
+../buildDB unix.stackexchange
+```
+
+## Maps
+
+This contains CSV files mapping enumerated constants to human-readable descriptions
+of for different types in the regular tables.
+For example, 
++ BadgeClassMap.csv maps 1, 2, 3 to Gold, Silver and Bronze.
++ VoteType.csv maps integers to AcceptedByOriginator, UpMod, Downmod, Offensive, Favorite, etc.
+
+`maps.sql` creates the SQL tables and imports the different csv files.
+
+
+
 ## Download the stackoverflow.com-*.7z files
 
 From https://archive.org/details/stackexchange, download the individual stackoverflow.com site data
@@ -127,14 +146,6 @@ There are 53,810 unique tags. The frequency for each is in TagCounts. See the to
 + Posts.xml/csv
    + PostTypeId map in PostTypeId.csv
    
-
-
-
-
-
-
-
-
 # Tag Counts
 ```{r}
 head(sort(tagCounts, decreasing = TRUE), 500)
